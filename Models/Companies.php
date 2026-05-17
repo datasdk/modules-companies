@@ -3,14 +3,24 @@
 namespace Modules\Companies\Models;
 
 
+<<<<<<< HEAD
 use DataSDK\Addresses\Traits\HasAddresses;
 use DataSDK\Addresses\Traits\HasContacts;
 use Spatie\Tags\HasTags;
+=======
+use App\Traits\HasAddresses\HasAddresses;
+use App\Traits\HasContacts\HasContacts;
+use App\Traits\Tags\Tags;
+>>>>>>> 9b9d6c660d69d33530610f05faa5e8f6ffa2a95d
 use App\Models\User;
 use ActionModel;
 use Modules\Media\Traits\InteractsWithMedia;
 use Modules\Media\Contracts\HasMedia;
+<<<<<<< HEAD
 use DataSDK\Tools\Traits\Nestable;
+=======
+use App\Traits\Nestable\Nestable;
+>>>>>>> 9b9d6c660d69d33530610f05faa5e8f6ffa2a95d
 use Modules\Companies\Http\Scopes\CompanyScopes;
 use Modules\Companies\Models\CompanyApplication;
 use Modules\Teams\Models\Team;
@@ -24,7 +34,11 @@ class Companies extends ActionModel implements HasMedia
     // Traits to add functionality for addresses, contacts, tags, and media interaction
     use HasAddresses;
     use HasContacts;
+<<<<<<< HEAD
     use HasTags;
+=======
+    use Tags;
+>>>>>>> 9b9d6c660d69d33530610f05faa5e8f6ffa2a95d
     use InteractsWithMedia;
     use Nestable;
     use CompanyScopes;

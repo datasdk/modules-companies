@@ -7,7 +7,11 @@ use Orion\Http\Requests\Request as OrionRequest;
 use Modules\Companies\Models\User;
 use Modules\Companies\Models\Companies;
 use Modules\Companies\Http\Requests\CompanyRequest;
+<<<<<<< HEAD
 use Modules\Crm\Services\UserService;
+=======
+use App\Services\Users\UserService;
+>>>>>>> 9b9d6c660d69d33530610f05faa5e8f6ffa2a95d
 
 
 class UserCompanyController extends OrionRelationController

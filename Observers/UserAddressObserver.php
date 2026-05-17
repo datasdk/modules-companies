@@ -3,9 +3,15 @@
 namespace Modules\Companies\Observers;
 
 use App\Models\User;
+<<<<<<< HEAD
 Use Modules\Companies\Models\Addresses;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validator;
+=======
+use App\Helpers\Validation;
+Use Modules\Companies\Models\Addresses;
+use Illuminate\Support\Facades\Route;
+>>>>>>> 9b9d6c660d69d33530610f05faa5e8f6ffa2a95d
 
 
 class UserAddressObserver
@@ -25,18 +31,26 @@ class UserAddressObserver
         $req = request();
      
 
+<<<<<<< HEAD
         $validator = Validator::make($req->all(), [
+=======
+        if(Validation::make($req->all(),[
+>>>>>>> 9b9d6c660d69d33530610f05faa5e8f6ffa2a95d
             "address" => "sometimes|nullable|array",
             "address.street" => "sometimes|nullable",
             "address.city" => "sometimes|nullable",
             "address.state" => "sometimes|nullable",
             "address.post_code" => "sometimes|nullable",
            // "address.country_id " => "sometimes|nullable|int",
+<<<<<<< HEAD
         ]);
 
         if ($validator->fails()) {
             return false;
         }
+=======
+        ])){ return false; }
+>>>>>>> 9b9d6c660d69d33530610f05faa5e8f6ffa2a95d
 
 
 

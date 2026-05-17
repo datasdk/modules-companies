@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 namespace Modules\Companies\Listeners;
@@ -27,3 +28,34 @@ class UserDelete
 
     }
 }
+=======
+<?php
+
+namespace Modules\Companies\Listeners;
+
+use Illuminate\Http\Request;
+use App\Models\User;
+use Modules\Companies\Events\StoreEvents;
+use Modules\Companies\Http\Requests\CompanyRequest;
+use Modules\Companies\Models\Companies;
+
+class UserUpdate
+{
+    /**
+     * Handle the event.
+     *
+     * @param  StoreEvents  $event
+     * @return void
+     */
+    public function handle(Request $req, User $user)
+    {
+    
+        if($req->has("company")){
+
+            return Companies::create($req->get("company"));
+
+        }
+
+    }
+}
+>>>>>>> 9b9d6c660d69d33530610f05faa5e8f6ffa2a95d
