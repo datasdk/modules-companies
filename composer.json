@@ -1,8 +1,10 @@
 {
-    "name": "modules/companies",
+    "name": "datasdk/companies-module",
+    "type": "laravel-module",
+    "license": "proprietary",
+
     "description": "Companies module for Laravel 10",
-    "type": "library",
-    "license": "MIT",
+
     "authors": [
         {
             "name": "Your Name",
